@@ -1,10 +1,16 @@
+import("dotenv/config");
 import express from "express";
+import routes from "./routes/index.js";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 
-app.get("/", (__, res) => {
-  res.send("hello world");
+const main = async () => {
+  app.use("/", routes);
+  app.listen(process.env.PORT || 3000);
+};
+
+main().catch((e) => {
+  console.log(e);
 });
-
-app.listen(proccess.env.PORT || 3000);
