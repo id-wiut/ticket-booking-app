@@ -1,29 +1,39 @@
 <%- include('./partials/_header'); %>
-<form class="container py-5">
-    <div>
-        <h2 class="display-4">Open ticket</h2>
-        <p class="lead">
-            Plese fill the form below to open new <mark> support ticket</mark>.
-        </p>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Email</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="[studentID]@students.wiut.uz">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Please select your area</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>Tech support</option>
-        <option>New Device</option>
-        <option>Missed lecture</option>
-        <option>Othe</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Your Message</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <input type="submit" value="Open Ticket" class="btn btn-dark">
-  </form>
+<form class="container py-5" action="/tickets/add" method="POST">
+  <div>
+    <h2 class="display-4">Open ticket</h2>
+    <p class="lead">
+      Plese fill the form below to open new <mark> support ticket</mark>.
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="[studentID]@students.wiut.uz"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Please select your area</label>
+    <select class="form-control" name="area" id="exampleFormControlSelect1">
+      <option>Tech support</option>
+      <option>New Device</option>
+      <option>Missed lecture</option>
+      <option>Othe</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Your Message</label>
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="message"
+    ></textarea>
+  </div>
+  <input type="submit" value="Open Ticket" class="btn btn-dark" />
+</form>
 <%- include('./partials/_footer'); %>
-

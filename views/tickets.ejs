@@ -1,0 +1,33 @@
+<%- include('./partials/_header'); %>
+<div class="alert py-5" role="alert">
+  <h4 class="display-4">All tickets!</h4>
+  <p>here you can view all open tickets!</p>
+  <hr />
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Emails</th>
+          <th scope="col">Areas</th>
+          <th scope="col">Messages</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i < tickets.length; i++) { %>
+        <tr>
+          <th scope="row"><%= i+1 %></th>
+          <td><%= tickets[i]["email"]%></td>
+          <td><%= tickets[i]["area"]%></td>
+          <td><%= tickets[i]["message"]%></td>
+          <td>
+            <a class="btn btn-dark text-light">View Ticket</a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%- include('./partials/_footer'); %>
