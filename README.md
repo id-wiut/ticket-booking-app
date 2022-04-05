@@ -2,7 +2,8 @@
 
 GitHub repo: https://github.com/id-wiut/ticket-booking-app
 
-Glitch link:
+Deploy link: https://ticket-booking-app-lffpe.ondigitalocean.app/tickets
+WARNING: It took over an hour of time wasting to try deploying app in Glitch and I decided to deploy it in DigitalOcean which provides its own CI/CD solutions.
 
 The app was built to make connection with users and tech support group. Users can create tickets with their issues and tech support can reply to them.
 
