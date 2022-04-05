@@ -1,0 +1,17 @@
+{
+  "name": "00011841-ticket-application",
+  "version": "1.0.0",
+  "description": "Ticket Booking Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Nodejs",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "00011841",
+  "license": "ISC"
+}
